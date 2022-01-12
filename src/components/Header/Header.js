@@ -45,8 +45,8 @@ const Header = () => {
                         <a href="#about" className={navBar ? 'enlace2' : 'enlace'} onClick={handleClick} >About us</a>
                         <a href="#services" className={navBar ? 'enlace2' : 'enlace'} onClick={handleClick}>Services</a>
                         <a href="#products" className={navBar ? 'enlace2' : 'enlace'} onClick={handleClick}>Products</a>
-                        <a href="#" className={navBar ? 'enlace2' : 'enlace'} onClick={handleClick}>Details</a>
-                        <a href="#" className={navBar ? 'enlace2' : 'enlace'} onClick={handleClick}>Contact</a>
+                        <a href="#details" className={navBar ? 'enlace2' : 'enlace'} onClick={handleClick}>Details</a>
+                        <a href="#contact" className={navBar ? 'enlace2' : 'enlace'} onClick={handleClick}>Contact</a>
                     </div>
                 </section>
             </nav>
