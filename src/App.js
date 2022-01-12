@@ -5,6 +5,7 @@ import Services from "./components/Services/Services";
 import Products from "./components/Produts/Products";
 import Details from "./components/Details/Details";
 import Contact from "./components/Contact/Contact";
+import Footer from './components/Footer/Footer';
 
 const App = () => {
 
@@ -34,6 +35,9 @@ const App = () => {
       <section className="contact" id="contact">
         <Contact />
       </section>
+
+        <Footer/>
+
     </>
   );
 }

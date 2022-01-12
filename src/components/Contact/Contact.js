@@ -7,10 +7,8 @@ const Contact = () => {
         <section className='contact after1'>
             <div className='contact_text container'>
                 <h1 className='principal'>Get in touch</h1>
-                <h1 className='secondary'>We are hiring</h1>
-
+                <h1 className='secondary'>We are hiring!</h1>
                 <form action="">
-
                     <div class="form_input">
                         <input type="text" placeholder="Name" name="name"
                             autoComplete="new-password"/>
@@ -28,12 +26,11 @@ const Contact = () => {
                         ></textarea>
                     </div>
                         <input type="submit" value="Send" />
-                 
                 </form>
 
             </div>
             <div className='contact_img container'>
-                <img src="img/contact.png" alt="" />
+                <img src="img/contact.png" alt="" className='img-fluid' />
             </div>
 
 
