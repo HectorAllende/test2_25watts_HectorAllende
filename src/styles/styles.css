@@ -124,13 +124,14 @@ nav{
 .nav{
     display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
     height: 80px;
     width: 100%;
     align-items: center;
 }
 
 .nav .logo{
-    height: 50%;
+    height: 40%;
 }
 
 .nav .logo img{
@@ -153,7 +154,7 @@ nav{
     font-weight: var(--unnamed-font-family-roboto);
     font-size: 21px;
     text-decoration: none;
-    margin-left: 50px;
+    margin-left: 15px;
     transition: color .3s ease-in-out;
     --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
 
@@ -841,6 +842,7 @@ input[type="submit"]{
 
     .nav .enlaces-header a{
         font-size: 16px;
+        padding-bottom: 4px;
         margin-left: 15px;
    
     }
@@ -929,6 +931,9 @@ input[type="submit"]{
 
 
 @media screen and (max-width:992px){
+
+
+    
     .carousel-caption h5{
         font-size: var(--unnamed-font-size-21);
         margin-bottom: 5px;
