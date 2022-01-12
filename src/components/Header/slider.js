@@ -1,11 +1,25 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
 const Slider = () => {
-    return (
+    const [datos, setDatos]= useState([])
 
+    useEffect(() => {
+ 
+        const consultarApi = async ()=>{
+            const url = 'http://localhost:8000/header'
+            const resultado = await axios.get(url)
+            setDatos(resultado.data[0])
+        }
+        consultarApi()
+    }, [])
+
+    const {titulo1, parrafo1, img1, titulo2, parrafo2, img2, titulo3, parrafo3, img3 } = datos
+ 
+    return (
         <>
             <section className='banner'>
                 <div className='imagenes'>
@@ -17,29 +31,26 @@ const Slider = () => {
                         </div>
                         <div className="carousel-inner">
                             <div className="carousel-item active" data-bs-interval="3000">
-                                <img src="img/slide1.png" className="d-block w-100" alt="slider1" />
+                                <img src={img1}className="d-block w-100" alt="slider1" />
                                 <div className="carousel-caption container">
-                                    <h5>Sed ut perspiciatis unde omnis iste natus</h5>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
-
+                                    <h5>{titulo1}</h5>
+                                    <p>{parrafo1}</p>
                                     <a href="#">Read more</a>
                                 </div>
                             </div>
                             <div className="carousel-item" data-bs-interval="3000">
-                                <img src="img/slide2.png" className="d-block w-100" alt="slider2" />
+                                <img src={img2} className="d-block w-100" alt="slider2" />
                                 <div className="carousel-caption  container">
-                                    <h5>Proin elementum massa et felis</h5>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
-
+                                    <h5>{titulo2}</h5>
+                                    <p>{parrafo2}</p>
                                     <a href="#">Read more</a>
                                 </div>
                             </div>
                             <div className="carousel-item" data-bs-interval="3000">
-                                <img src="img/slide3.png" className="d-block w-100" alt="slider3" />
+                                <img src={img3} className="d-block w-100" alt="slider3" />
                                 <div className="carousel-caption container">
-                                    <h5>Nulla rhoncus vulputate congue</h5>
-                                    <p>Aenean rutrum eros nec lacus vehicula, sempler euismod dui</p>
-
+                                    <h5>{titulo3}</h5>
+                                    <p>{parrafo3}</p>
                                     <a href="#">Read more</a>
                                 </div>
                             </div>

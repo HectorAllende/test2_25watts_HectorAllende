@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Header from "./components/Header/Header";
 import About from "./components/About us/About";
 import Services from "./components/Services/Services";
@@ -5,10 +6,19 @@ import Products from "./components/Produts/Products";
 import Details from "./components/Details/Details";
 import Contact from "./components/Contact/Contact";
 
-function App() {
+const App = () => {
+
+  useEffect(() => {
+    const jumbotron = document.querySelector('.jumbotron');
+    jumbotron.scrollIntoView({ behavior: 'smooth' })
+  }, [])
+
   return (
     <>
-      <Header />
+
+      <div className='jumbotron'>
+        <Header />
+      </div>
       <section className="about" id="about">
         <About />
       </section>
@@ -24,10 +34,6 @@ function App() {
       <section className="contact" id="contact">
         <Contact />
       </section>
-
-
-
-
     </>
   );
 }
