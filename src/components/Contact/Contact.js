@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 const Contact = () => {
 
     const [name, setName] = useState('')
@@ -19,13 +18,10 @@ const Contact = () => {
         }
 
         setError(false)
-
         setName('')
         setEmail('')
         setPhone('')
         setMessage('')
-
-        
 
     }
 
@@ -47,7 +43,6 @@ const Contact = () => {
                             value={name}
                             autoComplete="off"
                             onChange={e => setName(e.target.value)}
-
                         />
                     </div>
                     <div className="form_input">
@@ -80,27 +75,15 @@ const Contact = () => {
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
                         />
-
                     </div>
 
-                {error && <p className='form_error'>Todos los campos son obligatorios</p> }
+                    {error && <p className='form_error'>All fields are required</p>}
                     <input type="submit" value="Send" />
                 </form>
-
-
-
             </div>
-
-           
-          
-
-
             <div className='contact_img container'>
                 <img src="img/contact.png" alt="" className='img-fluid' />
             </div>
-
-
-
         </section>
     );
 }
