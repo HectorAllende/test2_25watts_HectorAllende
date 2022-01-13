@@ -1,34 +1,100 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 const Contact = () => {
+
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [phone, setPhone] = useState('')
+    const [message, setMessage] = useState('')
+
+    const [error, setError] = useState(false)
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        if ([name, email, phone, message].includes('')) {
+            setError(true)
+            return
+        }
+
+        setError(false)
+
+        setName('')
+        setEmail('')
+        setPhone('')
+        setMessage('')
+
+        
+
+    }
+
     return (
 
         <section className='contact after1'>
             <div className='contact_text container'>
                 <h1 className='principal'>Get in touch</h1>
                 <h1 className='secondary'>We are hiring!</h1>
-                <form action="">
-                    <div class="form_input">
-                        <input type="text" placeholder="Name" name="name"
-                            autoComplete="new-password"/>
+                <form
+                    onSubmit={handleSubmit}
+                    autoComplete="new-password"
+                >
+                    <div className="form_input">
+                        <input
+                            id="name"
+                            type="text"
+                            placeholder="Name"
+                            value={name}
+                            autoComplete="off"
+                            onChange={e => setName(e.target.value)}
+
+                        />
                     </div>
-                    <div class="form_input">
-                        <input type="email" placeholder="Email" name="email"
-                            autoComplete="new-password"/>
+                    <div className="form_input">
+                        <input
+                            id="email"
+                            type="email"
+                            placeholder="Email"
+                            value={email}
+                            autoComplete="off"
+                            onChange={e => setEmail(e.target.value)}
+
+                        />
                     </div>
-                    <div class="form_input">
-                        <input type="tel" placeholder="Phone" name="tel"
-                            autoComplete="new-password"/>
+                    <div className="form_input">
+                        <input
+                            id="tel"
+                            type="tel"
+                            placeholder="Phone"
+                            value={phone}
+                            autoComplete="off"
+                            onChange={e => setPhone(e.target.value)}
+
+                        />
                     </div>
-                    <div class="form_textarea">
-                        <textarea placeholder="Message" name="mensaje" cols="30" rows="10"
-                        ></textarea>
+                    <div className="form_textarea">
+                        <textarea
+                            id="message"
+
+                            placeholder="Message"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                        />
+
                     </div>
-                        <input type="submit" value="Send" />
+
+                {error && <p className='form_error'>Todos los campos son obligatorios</p> }
+                    <input type="submit" value="Send" />
                 </form>
 
+
+
             </div>
+
+           
+          
+
+
             <div className='contact_img container'>
                 <img src="img/contact.png" alt="" className='img-fluid' />
             </div>

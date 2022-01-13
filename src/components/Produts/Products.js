@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 
-
 const Products = () => {
 
     const [datos, setDatos] = useState([])
@@ -16,9 +15,7 @@ const Products = () => {
         consultarApi()
     }, [])
 
-
     const { principal, secundario, titulo1, lista1, lista2, lista3, lista4 } = datos
-
 
     return (
         <section className='products'>
