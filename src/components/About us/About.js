@@ -17,15 +17,11 @@ const About = () => {
 
     const {principal, secundario, parrafo, boton, img}= datos
 
-
-
     return (  
         <>
         <section className='about-us' id='about'>
             <div className='container after about'>
-
                 <img src={img} alt="about" className='img-fluid'/>
-
                 <div className='textos_about'>
                     <h5 className='principal'>{principal}</h5>
                     <h5 className='secundario'>{secundario}</h5>
@@ -35,7 +31,6 @@ const About = () => {
             </div>
         </section>
         </>
-
     );
 }
  

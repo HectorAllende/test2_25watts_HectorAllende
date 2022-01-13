@@ -1,32 +1,61 @@
 {
-  "header": [
-    {
-      "id": 1,
-      "titulo1": "Sed ut perspiciatis unde omnis iste natus",
-      "parrafo1": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.",
-      "img1":"img/slide1.png",
-      "titulo2": "Proin elementum massa et felis",
-      "parrafo2": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.",
-      "img2":"img/slide2.png",
-      "titulo3": "Nulla rhoncus vulputate congue",
-      "parrafo3": "Aenean rutrum eros nec lacus vehicula, sempler euismod dui.",
-      "img3":"img/slide3.png"
-      
-    }
-  ],
-  "about": [
-    {
-      "id": 1,
-      "principal": "About us",
-      "secundario": "We Help Businesses",
-      "parrafo":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
-      "boton":"More info",
-      "img":"img/about.png"
+    "header": [{
+        "titulo1": "Sed ut perspiciatis unde omnis iste natus",
+        "parrafo1": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.",
+        "img1": "img/slide1.png",
+        "titulo2": "Proin elementum massa et felis",
+        "parrafo2": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.",
+        "img2": "img/slide2.png",
+        "titulo3": "Nulla rhoncus vulputate congue",
+        "parrafo3": "Aenean rutrum eros nec lacus vehicula, sempler euismod dui.",
+        "img3": "img/slide3.png"
 
+    }],
+    "about": [{
+        "principal": "About us",
+        "secundario": "We Help Businesses",
+        "parrafo": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
+        "boton": "More info",
+        "img": "img/about.png"
 
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    }],
+    "services": [{
+        "principal": "Services",
+        "secundario": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel gravida felis, id tempor ex. Suspendisse congue purus eu neque auctor, eget dictum ipsum facilisis. Sed scelerisque sodales lorem,",
+        "img1": "img/mundo.svg",
+        "parrafo1":"Stet clita kasd gubergren",
+        "img2": "img/arriba.svg",
+        "parrafo2":"At vero eos et accusam",
+        "img3": "img/llamar.svg",
+        "parrafo3":"Sed ut perspiciatis unde",
+        "img4": "img/llamar.svg",
+        "parrafo4":"Sed ut perspiciatis unde"
+        
+    }],
+    "products": [{
+        "principal": "Products",
+        "secundario": "In eget tortor tempor mollis purus",
+        "titulo1": "Aliquam at dui lorem ipsum",
+        "lista1":"Ut mattis gravida efficitur.",
+        "lista2": "Ut feugiat vehicula nibh, efficitur laoreet justo.",
+        "lista3":"Molestie id. Integer varius enim sit amet egestas.",
+        "lista4": "Ut mattis gravida efficitur"
+    }],
+    "details": [{
+        "titulo": "More details",
+        "subtitulo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel gravida felis, id tempor ex. Suspendisse congue purus eu neque auctor, eget dictum ipsum facilisis. Sed scelerisque sodales lorem,",
+        "img1": "img/ancla.svg",
+        "parrafo1": "Donec egestas tortor quis turpis finibus vestibulum vel nec ex. Nunc sed velit ullamcorper.",
+        "img2": "img/campana.svg",
+        "parrafo2": "Donec egestas tortor quis turpis finibus vestibulum vel nec ex. Nunc sed velit ullamcorper.",
+        "img3": "img/marcador.svg",
+        "parrafo3": "Donec egestas tortor quis turpis finibus vestibulum vel nec ex. Nunc sed velit ullamcorper.",
+        "img4": "img/rectangulo.svg",
+        "parrafo4": "Donec egestas tortor quis turpis finibus vestibulum vel nec ex. Nunc sed velit ullamcorper.",
+        "img5": "img/pincel.svg",
+        "parrafo5": "Donec egestas tortor quis turpis finibus.",
+        "img6": "img/caja.svg",
+        "parrafo6": "Donec egestas tortor quis turpis finibus vestibulum vel nec ex. Nunc sed velit ullamcorper."
+
+    }]
 }
