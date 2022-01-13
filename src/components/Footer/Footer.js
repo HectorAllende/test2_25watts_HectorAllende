@@ -1,29 +1,70 @@
 import React from 'react';
-
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Footer = () => {
+
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    };
     return (
 
         <footer id='footer'>
             <section className='footer container'>
-
                 <div className='footer_logo'>
                     <div className='footer_img'>
-                        <img src="img/logo_footer.svg" alt="logo" />
+
+                        <img src="img/logo_footer.svg" alt="logo" onClick={scrollToTop} />
+
                     </div>
                     <p>2020 © All rights reserved.</p>
                 </div>
 
                 <div className='footer_link'>
                     <div className='link1'>
-                        <a href="#about">About</a>
-                        <a href="#services">Services</a>
-                        <a href="#products">Products</a>
+                        <Link
+                            activeClass="active"
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+
+                        >About</Link>
+                        <Link
+                            activeClass="active"
+                            to="services"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >Services</Link>
+                        <Link
+                            activeClass="active"
+                            to="products"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >Products</Link>
                     </div>
                     <div className='link2'>
-                        <a href="#details">Details</a>
-                        <a href="#contact">Contact</a>
+                        <Link
+                            activeClass="active"
+                            to="contact"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
 
+                        >Details</Link>
+                        <Link
+                            activeClass="active"
+                            to="contact"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >Contact</Link>
                     </div>
                 </div>
 

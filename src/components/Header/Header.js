@@ -1,7 +1,9 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import Slider from './slider';
 import "./header.css"
 import { FiMenu, FiX } from "react-icons/fi";
+import { Link, animateScroll as scroll } from "react-scroll";
+
 
 const Header = () => {
 
@@ -10,23 +12,13 @@ const Header = () => {
     const toggleMenuClick = () => {
         setMenuClicked(!menuClicked);
     };
-
-
-
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    };
 
     const [navBar, setNavBar] = useState(false)
 
 
-    const handleClick = (e) => {
-        e.preventDefault()
-        const target = e.target.getAttribute('href')
-        const location = document.querySelector(target).offsetTop
-
-        window.scrollTo({
-            left: 0,
-            top: location - 80,
-        })
-    }
 
     const changeBackground = () => {
         if (window.scrollY >= 100) {
@@ -44,9 +36,7 @@ const Header = () => {
                 <section className='container nav'>
 
                     <div className='logo'>
-                        <a href="#">
-                            <img src="img/logo.svg" alt="logo" />
-                        </a>
+                        <img src="img/logo.svg" alt="logo" onClick={scrollToTop} />
                     </div>
 
                     {menuClicked ? (
@@ -61,15 +51,51 @@ const Header = () => {
 
 
                     <div className={
-          menuClicked ? "navbar__list navbar__list--active enlaces-header enlaces" : "navbar__list enlaces-header enlaces"
-        } id="enlaces">
+                        menuClicked ? "navbar__list navbar__list--active enlaces-header enlaces" : "navbar__list enlaces-header enlaces"
+                    } id="enlaces">
 
-                        <a href="#" className={navBar ? 'enlace2 navbar__link ' : 'enlace navbar__link'}>Home</a>
-                        <a href="#about" className={navBar ? 'enlace2 navbar__link' : 'enlace navbar__link'} onClick={handleClick} >About us</a>
-                        <a href="#services" className={navBar ? 'enlace2 navbar__link ' : 'enlace navbar__link'} onClick={handleClick}>Services</a>
-                        <a href="#products" className={navBar ? 'enlace2 navbar__link' : 'enlace navbar__link'} onClick={handleClick}>Products</a>
-                        <a href="#details" className={navBar ? 'enlace2 navbar__link' : 'enlace navbar__link'} onClick={handleClick}>Details</a>
-                        <a href="#contact" className={navBar ? 'enlace2 navbar__link' : 'enlace navbar__link'} onClick={handleClick}>Contact</a>
+                        <Link
+                            onClick={scrollToTop}
+                            className={navBar ? 'enlace2 navbar__link ' : 'enlace navbar__link'}>Home</Link>
+                        <Link
+                            activeClass="active"
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                            className={navBar ? 'enlace2 navbar__link' : 'enlace navbar__link'}  >About us</Link>
+                        <Link
+                            activeClass="active"
+                            to="services"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                            className={navBar ? 'enlace2 navbar__link ' : 'enlace navbar__link'} >Services</Link>
+                        <Link
+                            activeClass="active"
+                            to="products"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                            className={navBar ? 'enlace2 navbar__link' : 'enlace navbar__link'} >Products</Link>
+                        <Link activeClass="active"
+                            to="details"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+
+                            className={navBar ? 'enlace2 navbar__link' : 'enlace navbar__link'}>Details</Link>
+                        <Link activeClass="active"
+                            to="contact"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                            className={navBar ? 'enlace2 navbar__link' : 'enlace navbar__link'} >Contact</Link>
                     </div>
                 </section>
             </nav>

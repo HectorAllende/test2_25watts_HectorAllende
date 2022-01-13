@@ -136,6 +136,7 @@ nav {
 .nav .logo img {
     height: 100%;
     vertical-align: top;
+    cursor: pointer;
 }
 
 .enlaces-header {
@@ -162,6 +163,9 @@ nav {
     display: block;
     color: var(--unnamed-color-e0752f);
     --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.nav .enlaces-header .enlace, .enlace2{
+    cursor: pointer;
 }
 
 .nav .enlaces-header .enlace2:hover {
@@ -734,6 +738,10 @@ input[type="submit"] {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+ 
+}
+.footer .footer_logo img{
+    cursor: pointer;
 }
 
 .footer .footer_logo p {
@@ -755,6 +763,7 @@ input[type="submit"] {
 .link2 {
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .footer .footer_link .link1 a,
