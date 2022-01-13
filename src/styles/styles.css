@@ -715,8 +715,18 @@ input[type="submit"] {
     margin-top: 5px;
     font-size: 14px;
     font-family: var(--unnamed-font-family-roboto);
+    color: var(--unnamed-color-343434);
+} 
+
+
+.form_ok{
+    margin-top: 5px;
+    font-size: 14px;
+    font-family: var(--unnamed-font-family-roboto);
     color: var(--unnamed-color-e0752f);
 }
+
+
 
 
 /* Footer */
@@ -1453,20 +1463,38 @@ input[type="submit"] {
         font-size: 11px;
     }
     /* Footer */
+
     .footer {
-        height: 150px;
+        height: 400px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .footer {
+        height: 300px;
+        padding: 20px 0;
         width: 100%;
     }
     .footer .footer_logo {
         height: 30%;
         width: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .footer .footer_logo p {
         font-size: 10px;
     }
     .footer .footer_logo img {
-        width: 60%;
+        width: 100%;
         margin-bottom: 10px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
     }
     .footer .footer_link {
         height: 50%;

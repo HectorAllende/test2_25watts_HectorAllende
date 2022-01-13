@@ -8,20 +8,27 @@ const Contact = () => {
     const [message, setMessage] = useState('')
 
     const [error, setError] = useState(false)
+    const [confirmacion, setConfirmacion] = useState(false)
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
         if ([name, email, phone, message].includes('')) {
             setError(true)
+            setConfirmacion(false)
             return
         }
-
+        setConfirmacion(true)
         setError(false)
         setName('')
         setEmail('')
         setPhone('')
         setMessage('')
+
+        setTimeout(() => {
+            setConfirmacion(false)
+        }, 2000);
 
     }
 
@@ -77,7 +84,9 @@ const Contact = () => {
                         />
                     </div>
 
-                    {error && <p className='form_error'>All fields are required</p>}
+                    {error && <p className='form_error'>Attention: All fields are required</p>}
+                    {confirmacion && <p className='form_ok'>Message sent successfully</p>}
+
                     <input type="submit" value="Send" />
                 </form>
             </div>
