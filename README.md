@@ -1,6 +1,6 @@
 # Test_25Watts - Héctor Allende
 
-El proyecto es una landing page en ReactJs. El contenido de cada sección se consumen de manera asíncrona de un una API REST basada en un documento JSON, por lo que se monta un servidor virtual JSON-SERVER. La navegación por las distintas secciones es con efecto smooth scrolling y la sección formulario valida que los campos no queden vacios. 
+El proyecto es una landing page en ReactJs. El contenido de cada sección se consumen de manera asíncrona de una API REST basada en un documento JSON (db.json creado en la raiz del proyecto), por lo que se monta un servidor virtual JSON-SERVER. La navegación por las distintas secciones es con efecto smooth scrolling y la sección formulario valida que los campos no queden vacios. 
 
 ## Instalación - Pasos:
 
@@ -10,9 +10,9 @@ Abrir en la terminal la carpeta del proyecto/ clonar del repositorio git
 
 Luego para levantar el json-server, hay que correrlo en el puerto 8000. Ya que la petición se consume de ese puerto. Con el siguiente comando:
 
-### json-server --watch db.json --port 8000
+### `json-server --watch db.json --port 8000`
 
-Por último para abrir la pagina ejecutar:
+Por último para abrir la página ejecutar:
 
 ### `npm start`
 
