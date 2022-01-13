@@ -1,6 +1,6 @@
 # Test_25Watts - Héctor Allende
 
-El proyecto es una landing page en ReactJs. El contenido de cada sección se consumen de manera asíncrona de una API REST basada en un documento JSON (db.json creado en la raiz del proyecto), por lo que se monta un servidor virtual JSON-SERVER. La navegación por las distintas secciones es con efecto smooth scrolling y la sección formulario valida que los campos no queden vacios. 
+El proyecto es una landing page en ReactJs. El contenido de cada sección se consumen de manera asíncrona de una API REST basada en un documento JSON (db.json creado en la raíz del proyecto), por lo que se monta un servidor virtual JSON-SERVER. La navegación por las distintas secciones es con efecto smooth scrolling y la sección formulario valida que los campos no queden vacios. 
 
 ## Instalación - Pasos:
 
